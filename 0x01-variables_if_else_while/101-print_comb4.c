@@ -9,18 +9,19 @@
 
 int main(void)
 {
-	int c, i;
+	int u, t, h;
 
-	for (c = '0'; c <= '9'; c++)
+	for (h = '0'; h <= '9'; h++)
 	{
-		for (i = '0'; i <= '9'; i++)
+		for (t = (h + 1); t <= '9'; t++)
 		{
-			if (c < i)
+			for (u = (u + 1); u <= '9'; u++)
 			{
-				putchar(c);
-				putchar(i);
+				putchar(h);
+				putchar(t);
+				putchar(u);
 
-				if (c != '7' || (c == '8' && i != '9'))
+				if (h != '7' || t == '8' || u != '9')
 				{
 					putchar(',');
 					putchar(' ');
