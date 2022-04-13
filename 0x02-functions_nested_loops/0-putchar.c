@@ -1,24 +1,29 @@
 #include "main.h"
 
 /**
-	*main - Entry point
-	*Description: prints '_putchar\n'
-	*Return: Always 0 (success)
+	* main - Entry point
+	* Return: nothing, return void
 */
 
 int main(void)
 {
+	_putchar('_');
 
-char str[] = "_putchar\n"
-int i = 0;
+	_putchar('p');
 
-while (str[i] != '\0')
-		{
-		char c = str[i];
+	_putchar('u');
 
-		_putchar(c);
-		i++;
-		}
+	_putchar('t');
+
+	_putchar('c');
+
+	_putchar('h');
+
+	_putchar('a');
+
+	_putchar('r');
+
+	_putchar('\n');
 
 	return (0);
 }
