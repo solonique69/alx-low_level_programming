@@ -5,7 +5,7 @@
 	* Return: Always 0.
 */
 
-int _isdigit(int c)
+int _isdigit(int c) /** prints a digit if c is a digit */
 {
 	if (c >= 48 && c <= 57)
 	{
