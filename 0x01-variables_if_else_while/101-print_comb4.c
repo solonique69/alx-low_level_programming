@@ -2,32 +2,40 @@
 
 /**
 	* main - Entry point
-	* Description: prints two digits combination
-	*Return: Always 0 (success)
+	* Return: Always 0 (Success/correct)
 */
 
 int main(void)
 {
-	int u, t, h;
+	int left;
+	int right;
+	int center;
 
-	for (h = '0'; h <= '9'; h++)
+	for (left = 48; left <= 57; left++)
 	{
-		for (t = (h + 1); t <= '9'; t++)
+		for (center = left + 1; center <= 57; center++)
 		{
-			for (u = (u + 1); u <= '9'; u++)
+			for (right = center + 1 ; right <= 57; right++)
 			{
-				putchar(h);
-				putchar(t);
-				putchar(u);
+				putchar(left);
+				putchar (center);
+				putchar (right);
 
-				if (h != '7' || t == '8' || u != '9')
+				if  ((left == 55) && (center == left + 1) && (right == center + 1))
 				{
-					putchar(',');
-					putchar(' ');
+					break;
 				}
+
+				putchar(',');
+				putchar (' ');
+
 			}
+
+
 		}
+
 	}
+
 	putchar('\n');
 
 	return (0);
