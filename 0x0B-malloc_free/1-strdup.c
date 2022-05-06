@@ -38,10 +38,7 @@ char *_strcpy(char *dest, char *src)
 
 	int i = 0;
 
-
-
 	while (src[i] != '\0')
-
 	{
 
 		dest[i] = src[i];
@@ -51,8 +48,6 @@ char *_strcpy(char *dest, char *src)
 	}
 
 	dest[i] = '\0';
-
-
 
 	return (dest);
 
@@ -68,6 +63,7 @@ char *_strdup(char *str)
 {
 
 	char *dst;
+
 	unsigned int size;
 
 	if (str == 0)
