@@ -10,19 +10,24 @@ int main(void)
 {
 	int FDt; /*FirstDigit*/
 	int LDt; /*LastDigit*/
+	int Jade_i; /*Counter*/
 
-	for (FDt = 0; FDt < 10; FDt++)
+	Jade_i = 0;
+
+	for (FDt = 0; FDt <= 9; FDt++)
 	{
-		for (LDt = FDt + 1; LDt < 10; LDt++)
+		for (LDt = FDt + 1; LDt <= 9; LDt++)
 		{
-			putchar(FDt + '0');
-			putchar(FDt + '0');
-
-			if (FDt != 8 || LDt != 9)
+			if (Jade_i > 0)
 			{
 				putchar(',');
 				putchar(' ');
 			}
+
+			putchar(FDt + '0');
+			putchar(LDt + '0');
+			Jade_i = 1;
+
 		}
 	}
 
