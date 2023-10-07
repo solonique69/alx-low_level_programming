@@ -8,10 +8,10 @@
 
 int main(void)
 {
-	char Hn;  /*Lc - Hex numbers*/
+	int Hn;  /*Lc - Hex numbers*/
 	char Lc; /*Lc - Lowercase*/
 
-	for (Lc = '0'; Lc <= '9'; Lc++)
+	for (Hn = '0'; Hn <= '9'; Hn++)
 	{
 		putchar(Hn);
 	}
