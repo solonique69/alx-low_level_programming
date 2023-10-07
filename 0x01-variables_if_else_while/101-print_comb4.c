@@ -8,17 +8,21 @@
 
 int main(void)
 {
-	for (int i = 0; i < 10; i++)
-	{
-		for (int j = i + 1; j < 10; j++)
-		{
-			for (int k = j + 1; k < 10; k++)
-			{
-				putchar(i + '0');
-				putchar(j + '0');
-				putchar(k + '0');
+	int H;
+	int T;
+	int U;
 
-				if (i != 7 || j != 8 || k != 9)
+	for (H = 0; H < 10; H++)
+	{
+		for (T = H + 1; T < 10; T++)
+		{
+			for (U = T + 1; U < 10; U++)
+			{
+				putchar(H + '0');
+				putchar(T + '0');
+				putchar(U + '0');
+
+				if (H != 7 || T != 8 || U != 9)
 				{
 					putchar(',');
 					putchar(' ');
