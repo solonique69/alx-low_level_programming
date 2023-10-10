@@ -18,7 +18,7 @@ void print_alphabet_x10(void)
 			_putchar(Xn);
 		}
 
-		Jade_i++
+		Jade_i++;
 		_putchar('\n');
 	}
 }
