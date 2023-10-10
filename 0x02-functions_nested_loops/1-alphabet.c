@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - Entry point
  * Description; A C-function that outputs lower case letters
  * Return: Always 0 (Success)
  */
@@ -12,8 +12,8 @@ void print_alphabet(void)
 
 	for (Xn = 'a'; Xn <= 'z'; Xn++)
 	{
-		putchar(Xn);
+		_putchar(Xn);
 	}
 
-	putchar('\n');
+	_putchar('\n');
 }
