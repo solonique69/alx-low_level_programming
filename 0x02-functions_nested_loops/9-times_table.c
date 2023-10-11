@@ -24,13 +24,21 @@ void times_table(void)
 				_putchar(' ');
 
 				if (result < 10)
+				{
 					_putchar(' ');
+				}
+				else
+				{
+					_putchar('0' + result / 10);
+				}
 
-				_putchar('0' + result);
+				_putchar('0' + result % 10);
 			}
 
-			if (column < 9)
+			if (column == 9)
+			{
 				_putchar('\n');
+			}
 		}
 	}
 }
