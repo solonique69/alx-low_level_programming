@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * times_table - Prints the n > 0 times table.
+ * print_times_table - Prints the n > 0 times table.
  * @n: Value for multiplication
  */
 
-void times_table(int n)
+void print_times_table(int n)
 {
 	if (n < 0 || n > 15)
 		return;
