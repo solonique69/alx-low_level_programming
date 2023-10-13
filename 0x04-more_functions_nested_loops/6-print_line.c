@@ -13,7 +13,6 @@ void print_line(int n)
 
 	while (n > 0)
 	{
-		count = 1;
 
 		if (n <= 0)
 		{
