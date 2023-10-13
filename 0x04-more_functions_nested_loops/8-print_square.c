@@ -4,22 +4,20 @@
  * print_square - Prints a square of a given size
  * @size: The size of the square
  */
+
 void print_square(int size)
 {
-	if (size > 0)
-	{
-		_putchar('\n');
-		return;
-	}
-
 	int row, column;
 
-	for (row = 0; row < size; row++)
+	if (size > 0)
 	{
-		for (column = 0; column < size; column++)
+		for (row = 0; row < size; row++)
 		{
-			_putchar('#');
+			for (column = 0; column < size; column++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
