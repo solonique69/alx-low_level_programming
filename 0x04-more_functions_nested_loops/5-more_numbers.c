@@ -14,7 +14,7 @@ void more_numbers(void)
 
 	while (i < 11)
 	{
-		for (n = 0; n <= 14; n++)
+		for (n = 0; n < 15; n++)
 		{
 			_putchar(n + '0');
 		}
