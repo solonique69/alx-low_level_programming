@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * Description: Fizz Buzz program
+ * Description: FizzBuzz program
  * Return: Always 0 (Success)
  */
 
