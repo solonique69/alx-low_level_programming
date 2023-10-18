@@ -5,15 +5,21 @@ void rev_string(char *s)
 	if (!s || !*s)
 		return;
 
-	int length = 0;
+	int length;
+
+	length = 0;
 
 	while (s[length] != '\0')
 	{
 		length++;
 	}
 
-	int start = 0;
-	int end = length - 1;
+	int start;
+	int end;
+
+	start = 0;
+	end = length - 1;
+
 
 	while (start < end)
 	{
