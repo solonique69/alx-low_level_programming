@@ -2,10 +2,13 @@
 
 void rev_string(char *s)
 {
+	int length;
+	int start;
+	int end;
+	char temp;
+
 	if (!s || !*s)
 		return;
-
-	int length;
 
 	length = 0;
 
@@ -14,16 +17,12 @@ void rev_string(char *s)
 		length++;
 	}
 
-	int start;
-	int end;
-
 	start = 0;
 	end = length - 1;
 
-
 	while (start < end)
 	{
-		char temp = s[start];
+		temp = s[start];
 		s[start] = s[end];
 		s[end] = temp;
 
