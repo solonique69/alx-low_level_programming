@@ -12,34 +12,34 @@
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int carry = 0;
-	int i, j, k;
-	int sum, num1, num2;
+	int i = size_r - 1;
+	int j = strlen(n1) - 1;
+	int k = strlen(n2) - 1;
 
-	int len1 = _strlen(n1);
-	int len2 = _strlen(n2);
-
-	if (size_r <= len1 || size_r <= len2)
-		return (0);
-
-	for (i = 0; i < size_r; i++)
-		r[i] = '\0';
-
-	i = len1 - 1;
-	j = len2 - 1;
-	k = size_r - 2;
-
-	while (i >= 0 || j >= 0 || carry > 0)
+	while (j >= 0 || k >= 0)
 	{
-		num1 = (i >= 0) ? n1[i] - '0' : 0;
-		num2 = (j >= 0) ? n2[j] - '0' : 0;
-		sum = num1 + num2 + carry;
+		int d1 = j >= 0 ? n1[j] - '0' : 0;
+		int d2 = k >= 0 ? n2[k] - '0' : 0;
+		int sum = d1 + d2 + carry;
+
+		r[i] = sum % 10 + '0';
 		carry = sum / 10;
-		sum = sum % 10;
-		r[k] = sum + '0';
 		i--;
 		j--;
 		k--;
 	}
 
-	return (r + k + 1);
+	if (carry > 0)
+	{
+		if (i < 0)
+		{
+			return (0);
+		}
+		r[i] = carry + '0';
+		i--;
+	}
+
+	r[i] = '\0';
+
+	return (r);
 }
