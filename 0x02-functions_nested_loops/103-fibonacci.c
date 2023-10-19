@@ -23,7 +23,7 @@ int main(void)
 		b = next;
 	}
 
-	printf("Sum of even Fibonacci numbers less than 4,000,000 : %d\n", sum);
+	printf("%d\n", sum);
 
 	return (0);
 }
