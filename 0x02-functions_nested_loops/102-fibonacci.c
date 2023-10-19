@@ -9,10 +9,10 @@ int main(void)
 	int counter;
 	int countto = 50;
 	long next;
-	long a = 0;
+	long a = 1;
 	long b = 1;
 
-	for (counter = 1; counter < countto; counter++)
+	for (counter = 0; counter < countto; counter++)
 	{
 		printf("%li", a);
 
