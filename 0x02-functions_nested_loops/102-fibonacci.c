@@ -10,7 +10,7 @@ int main(void)
 	int counter;
 	int countto = 50;
 	long a = 1;
-	long b = 1;
+	long b = 2;
 	int next;
 
 	for (counter = 1; counter <= countto; counter++)
