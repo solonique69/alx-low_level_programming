@@ -4,23 +4,25 @@
  * main - print first 50 Fibonacci numbers
  * Return: 0
  */
+
 int main(void)
 {
 	int counter;
 	int countto = 50;
-	long next;
 	long a = 1;
 	long b = 1;
+	int next;
 
-	for (counter = 0; counter < countto; counter++)
+	for (counter = 1; counter <= countto; counter++)
 	{
-		printf("%li", a);
-
-		if (counter < countto - 1)
+		if (counter == countto)
 		{
-			printf(", ");
+			printf("%li", a);
 		}
-
+		else
+		{
+			printf("%li, ", a);
+		}
 
 		next = a + b;
 		a = b;
