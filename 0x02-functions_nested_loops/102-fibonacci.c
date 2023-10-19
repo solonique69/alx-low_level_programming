@@ -13,7 +13,7 @@ int main(void)
 	long b = 2;
 	int next;
 
-	for (counter = 1; counter <= countto; counter++)
+	for (counter = 1; counter <= (countto / 2); counter++)
 	{
 		if (counter == countto)
 		{
