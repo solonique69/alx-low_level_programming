@@ -8,23 +8,19 @@
 int main(void)
 {
 	int counter;
-	int countto = 50;
+	int fiboNum = 50;
 	long a = 1;
 	long b = 2;
-	int next;
+	long next;
 
-	for (counter = 1; counter <= (countto / 2); counter++)
+	printf("%li, %li", a, b);
+
+	for (counter = 3; counter <= fiboNum; counter++)
 	{
-		if (counter == countto)
-		{
-			printf("%li", a);
-		}
-		else
-		{
-			printf("%li, ", a);
-		}
-
 		next = a + b;
+
+		printf(", %li", next);
+
 		a = b;
 		b = next;
 	}
