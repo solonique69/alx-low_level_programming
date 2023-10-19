@@ -20,8 +20,9 @@ int main(void)
 			printf(", ");
 		}
 
-		long next = a + b;
+		long next;
 
+		next = a + b;
 		a = b;
 		b = next;
 	}
