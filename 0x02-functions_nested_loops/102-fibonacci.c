@@ -12,7 +12,7 @@ int main(void)
 	long a = 0;
 	long b = 1;
 
-	for (counter = 0; counter < countto; counter++)
+	for (counter = 1; counter < countto; counter++)
 	{
 		printf("%li", a);
 
