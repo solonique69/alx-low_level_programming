@@ -16,18 +16,12 @@ int main(void)
 	{
 		next = a + b;
 
-		if (n < 98)
-		{
-			printf("%lu, ", next);
-		}
-		else
-		{
-			printf("%lu\n", next);
-		}
+		printf(", %lu\n", next);
 
 		a = b;
 		b = next;
 	}
+	printf("\n");
 
 	return (0);
 }
