@@ -16,11 +16,11 @@ int main(void)
 	{
 		next = a + b;
 
-		if (n < 98)
-		{
-			printf(", ");
-		}
-
+		/**	if (n < 98)
+		*	{
+		*	printf(", ");
+		*	}
+		*/
 		printf("%lu", next);
 
 		a = b;
