@@ -16,7 +16,7 @@ int main(void)
 	{
 		next = a + b;
 
-		printf(", %lu\n", next);
+		printf(", %lu", next);
 
 		a = b;
 		b = next;
