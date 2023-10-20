@@ -10,7 +10,7 @@ int main(void)
 	int n;
 	unsigned long a = 1, b = 2, next;
 
-	printf("%lu, %lu,", a, b);
+	printf("%lu, %lu", a, b);
 
 	for (n = 3; n <= 98; n++)
 	{
