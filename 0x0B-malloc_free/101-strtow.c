@@ -1,45 +1,77 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * argstostr - Concatenates all arguments of the program into a string;
-   arguments are separated by a new line in the string.
- * @ac: The number of arguments passed to the program.
- * @av: An array of pointers to the arguments.
- * Return: If ac == 0, av == NULL, or the function fails - NULL.
- * Otherwise - a pointer to the new string.
+ * count_word - helper function to count the number of words in a string
+ * @s: string to evaluate
+ *
+ * Return: number of words
  */
-
-char *argstostr(int ac, char **av)
+int count_word(char *s)
 {
-	char *str;
-	int arg, byte, index, size = ac;
+	int flag, c, w;
 
-	if (ac == 0 || av == NULL)
-		return (NULL);
+	flag = 0;
+	w = 0;
 
-	for (arg = 0; arg < ac; arg++)
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		for (byte = 0; av[arg][byte]; byte++)
-			size++;
+		if (s[c] == ' ')
+			flag = 0;
+		else if (flag == 0)
+		{
+			flag = 1;
+			w++;
+		}
 	}
 
-	str = malloc(sizeof(char) * size + 1);
+	return (w);
+}
+/**
+ * **strtow - splits a string into words
+ * @str: string to split
+ *
+ * Return: pointer to an array of strings (Success)
+ * or NULL (Error)
+ */
+char **strtow(char *str)
+{
+	char **matrix, *tmp;
+	int i, k = 0, len = 0, words, c = 0, start, end;
 
-	if (str == NULL)
+	while (*(str + len))
+		len++;
+	words = count_word(str);
+	if (words == 0)
 		return (NULL);
 
-	index = 0;
+	matrix = (char **) malloc(sizeof(char *) * (words + 1));
+	if (matrix == NULL)
+		return (NULL);
 
-	for (arg = 0; arg < ac; arg++)
+	for (i = 0; i <= len; i++)
 	{
-		for (byte = 0; av[arg][byte]; byte++)
-			str[index++] = av[arg][byte];
-
-		str[index++] = '\n';
+		if (str[i] == ' ' || str[i] == '\0')
+		{
+			if (c)
+			{
+				end = i;
+				tmp = (char *) malloc(sizeof(char) * (c + 1));
+				if (tmp == NULL)
+					return (NULL);
+				while (start < end)
+					*tmp++ = str[start++];
+				*tmp = '\0';
+				matrix[k] = tmp - c;
+				k++;
+				c = 0;
+			}
+		}
+		else if (c++ == 0)
+			start = i;
 	}
 
-	str[size] = '\0';
+	matrix[k] = NULL;
 
-	return (str);
+	return (matrix);
 }
