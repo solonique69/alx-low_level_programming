@@ -2,7 +2,7 @@
 #define _DOG_H_
 
 /**
- * struct dog - a dog
+ * struct dog - Dog Wonder
  * @name: its name
  * @age: its age
  * @owner: its owner
