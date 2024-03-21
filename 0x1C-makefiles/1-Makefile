@@ -1,0 +1,13 @@
+# Usage:
+# make        # Compile all .c files
+# make clean  # Remove all indicated files
+
+.PHONY: all clean
+
+CC = gcc
+
+SRC := $(wildcard *.c)
+
+all:
+	@echo "We are compiling files..."
+	$(CC) $(SRC) -o school
