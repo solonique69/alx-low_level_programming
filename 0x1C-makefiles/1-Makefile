@@ -1,7 +1,6 @@
 CC = gcc
 
-SRC := main.c school.c
+SRC = main.c school.c
 
 all:
-	@echo "We are compiling files..."
 	$(CC) $(SRC) -o school
