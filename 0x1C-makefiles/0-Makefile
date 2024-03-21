@@ -1,0 +1,14 @@
+.PHONY: all introduction generate clean
+
+all: introduction generate
+
+introduction:
+	@echo "Hello World"
+
+generate:
+	@echo "Compiling files..."
+	gcc main.c school.c -o school
+
+clean:
+	@echo "Cleaning up..."
+	rm *.o school
